@@ -1,0 +1,27 @@
+<%= form_for [artist, item] do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_first_name  %><br>
+    <%= f.text_field :customer_first  %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_last_name  %><br>
+    <%= f.text_field :customer_last  %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_email %><br>
+    <%= f.text_field :customer_email %>
+  </div>
+  <div class="field">
+  	<%= f.submit class: "btn btn-default" %>
+  </div>
+  
+<% end %>

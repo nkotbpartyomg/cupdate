@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @item.customer_first %>, we have a Cupdate for you!</h1>
+    <p><%= @artist.first_name %> has made some progress on your item, <%= @item.name%>.</p>
+    <p>The item is currently in the <b><%= @item.status %></b> phase.</p>
+    <p><%= @artist.first_name %> included this note about your item: <%= @item.note%></p>
+    <p>Have a wonderful day!</p>
+    <p>Best,</p>
+    <p>Your friends at Cupdate</p>
+  </body>
+</html>

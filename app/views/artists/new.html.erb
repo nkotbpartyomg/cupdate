@@ -1,0 +1,15 @@
+<div id="sign-up-wrapper">
+
+	<div class="pull-left">
+		<p>Thank you for your interest!</p>
+		<p>We just need a few pieces of information from you and then you can get started.</p>
+		<%= image_tag("cup_empty_big.png") %>
+
+	</div> <!--end left float div-->
+
+
+	<div class="pull-right">
+		<%= render partial: "form", locals: { artist: @artist } %>
+	</div><!--end right float div-->
+
+</div>
