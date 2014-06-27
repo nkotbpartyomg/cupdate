@@ -17,4 +17,9 @@ class Artist < ActiveRecord::Base
 
 	has_many :items, dependent: :destroy
 	has_secure_password
+
+	def full_name
+		"#{first_name} #{last_name}"
+	end
+
 end

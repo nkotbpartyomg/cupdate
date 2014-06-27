@@ -8,41 +8,40 @@
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Roboto:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+	<% if notice %>
+		<p class="alert alert-info alert-dismissable in fade">
+			<%= notice %>
+		</p>
+	<% end %>
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 		    <div class="navbar-left">
 		    	<a href= "/"><%= image_tag("cupdate_logo.png", class: "nav-icon") %></a>
 		    </div>
 		    <form class="navbar-form navbar-right">
-  				<% if @artist == nil %>
-	  				<div class="form-group">
-	   				<input type="text" class="form-control" placeholder="Email">
-	   				<input type="text" class="form-control" placeholder="Password">
-	  				</div>
-	  				<button type="submit" class="btn btn-default">Log in</button>
-  				<% else %>
-	  				<p>Signed in as <%= @artist.first_name %> <%=@artist.last_name %> </p>
-	  				<button type="button" class="btn btn-default navbar-btn">Log out</button>
+  				<% if session[:artist_id]  %>
+	  				<p class="navbar-text">Signed in as <%= @current_user.full_name %> </p>
+	  				<%= link_to "Log out", sessions_destroy_path, class: "navbar-text" %>
+	  			<% else %>
+	  				<p class="navbar-text">Welcome to Cupdate!</p>
+		  			<%=	link_to "Log In Here", sign_in_path, class: "navbar-text" %>	
   				<% end %>
 			</form>
 		</div>
 		</nav>
-	<% if notice %>
-		<p id = "notice"><%= notice %></p>
-	<% end %>
+
 
 <div id="app-wrap" class="container">
 
 <%= yield %>
 
 </div><!--end app-wrap div-->
-<div id="footer-top">
-	
-</div>
+
 <footer>
-	<span><%= image_tag("cup_footer_white.png") %></span>
-	<div class="pull-left">Built by Efeqdev</div>
-	<div class="pull-right">Cupdate is open source. Check out our code on Github</div>
+	<%= image_tag("cup_footer_red.png") %>
+	<p>Built by <a href="http://www.efeqdev.com" target=_blank>Efeqdev</a></p>
 </footer>
 
 </body>

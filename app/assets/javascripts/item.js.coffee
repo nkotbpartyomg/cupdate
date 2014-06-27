@@ -1,5 +1,5 @@
 `$(document).ready(function(){
-	$("#notice").fadeOut(4000);
+	$("#notice").delay(5000).fadeOut(1000);
     $('.col-xs-4').click(function(event){
         //remove all pre-existing active-statuses classes
         $('.active-status').removeClass('active-status');

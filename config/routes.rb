@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
 
   get 'sign_in' => "sessions#new", as: :sign_in
@@ -5,6 +6,10 @@ Rails.application.routes.draw do
   post 'sessions/create'
 
   get 'sessions/destroy'
+
+  get 'sessions/create_at_sign_up/artist/:artist_id', to: 'sessions#create_at_sign_up', as: :create_session_at_sign_up
+
+  get "send_test_email/artist/:artist_id", to: 'artists#send_test_email', as: :send_test_email
 
   resources :artists do 
     resources :items

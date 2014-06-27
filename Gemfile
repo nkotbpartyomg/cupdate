@@ -51,3 +51,5 @@ gem 'bootstrap-sass', '~> 3.1.1.1'
 
 gem 'stack_rescue', group: :development
 
+gem 'jquery-turbolinks', '~> 2.0.2'
+

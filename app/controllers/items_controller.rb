@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 	before_action :set_artist
+	before_action :authorize
+	before_action :check_artist
 
 	def index
 		redirect_to [@artist]

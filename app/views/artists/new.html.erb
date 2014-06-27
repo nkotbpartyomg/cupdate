@@ -1,4 +1,4 @@
-<div id="sign-up-wrapper">
+<div class="form-page">
 
 	<div class="pull-left">
 		<p>Thank you for your interest!</p>
@@ -9,7 +9,7 @@
 
 
 	<div class="pull-right">
-		<%= render partial: "form", locals: { artist: @artist } %>
+		<%= render partial: "form", locals: { artist: @artist, submit_button_text: "Sign up"} %>
 	</div><!--end right float div-->
 
 </div>

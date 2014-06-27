@@ -1,6 +1,4 @@
-<h1>Artist Dashboard</h1>
-
-<h3>Welcome back <%= @artist.first_name %>!</h3>
+<h1><%= @artist.first_name %>'s Artist Dashboard</h1>
 
 <table id="item-table">
   <thead>
@@ -24,8 +22,9 @@
   </tbody>
 </table>
 
+<%#= link_to "Send Test Email To Artist Address", send_test_email_path(@artist), class: "btn btn-default" %>
 <br>
 
-<%= link_to "Add new", new_artist_item_path(@artist), class: "btn btn-default" %>
+<%= link_to "Add new item", new_artist_item_path(@artist), class: "btn btn-default" %> <br>
 
 <%= link_to "Edit your settings", edit_artist_path, class: "btn btn-default" %>

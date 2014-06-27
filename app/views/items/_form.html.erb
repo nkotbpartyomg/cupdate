@@ -21,7 +21,9 @@
     <%= f.text_field :customer_email %>
   </div>
   <div class="field">
-  	<%= f.submit class: "btn btn-default" %>
+  	<%= f.submit submit_button_text, class: "btn btn-default" %>
   </div>
+
+  <%= link_to "Back to dashboard", artist_path(@artist), class: "btn btn-default" %>
   
 <% end %>

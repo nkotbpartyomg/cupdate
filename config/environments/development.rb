@@ -43,8 +43,8 @@ config.action_mailer.perform_deliveries = true
     port: 587,
     domain: "gmail.com",
     authentication: "plain",
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"],
+    user_name: "cupdater@gmail.com",
+    password: "9$217YkbF913W4b",
     enable_starttls_auto: true
   }
 end
