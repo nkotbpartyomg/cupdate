@@ -43,6 +43,8 @@ group :development do
   gem "binding_of_caller"
   gem "annotate"
   gem 'quiet_assets'
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-rails', '~> 1.1.1'
 end
 
 gem 'devise', '~> 3.2.4'
