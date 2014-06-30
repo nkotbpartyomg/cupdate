@@ -20,7 +20,7 @@ set :rvm_type, :user
 set :rvm_ruby_version, '2.1.2p95'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-# require 'capistrano/bundler'
+require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 
