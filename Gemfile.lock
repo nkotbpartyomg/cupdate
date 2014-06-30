@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/capistrano/rvm.git
+  revision: dc35ec5e7a74a422250bd6ff5e8885c8b742d0e5
+  specs:
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,6 +178,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1.1)
   capistrano (~> 3.2.1)
   capistrano-rails (~> 1.1.1)
+  capistrano-rvm!
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.4)
   jbuilder (~> 2.0)

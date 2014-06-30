@@ -46,6 +46,7 @@ group :development do
   gem 'quiet_assets'
   gem 'capistrano', '~> 3.2.1'
   gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rvm', github: 'capistrano/rvm'
   gem 'stack_rescue'
 end
 
