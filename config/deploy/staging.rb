@@ -10,7 +10,7 @@ role :app, %w{cupdate@162.243.28.34}
 role :web, %w{cupdate@162.243.28.34}
 role :db,  %w{cupdate@162.243.28.34}
 
-set :deploy_to, '/home/#{fetch(:application)}/#{fetch(:stage)}'
+set :deploy_to, '/home/cupdate/staging'
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the
@@ -27,11 +27,11 @@ server '162.243.28.34', user: 'cupdate', roles: %w{web app}, my_property: :my_va
 #
 # Global options
 # --------------
-#  set :ssh_options, {
+set :ssh_options, {
 #    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
+  forward_agent: true
 #    auth_methods: %w(password)
-#  }
+}
 #
 # And/or per server (overrides global)
 # ------------------------------------

@@ -10,7 +10,7 @@ role :app, %w{cupdate@162.243.28.34}
 role :web, %w{cupdate@162.243.28.34}
 role :db,  %w{cupdate@162.243.28.34}
 
-set :deploy_to, '/home/#{fetch(:application)}/#{fetch(:stage)}'
+set :deploy_to, '/home/cupdate/production'
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the
