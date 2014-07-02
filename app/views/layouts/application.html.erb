@@ -5,9 +5,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Roboto:300,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="<%= controller.controller_name %>">
 
 	<% if notice %>
 		<p class="alert alert-info alert-dismissable in fade">
@@ -21,8 +21,9 @@
 		    	<a href= "/"><%= image_tag("cupdate_logo.png", class: "nav-icon") %></a>
 		    </div>
 		    <form class="navbar-form navbar-right">
-  				<% if session[:artist_id]  %>
+  				<% if session[:artist_id] %>
 	  				<p class="navbar-text">Signed in as <%= @current_user.full_name %> </p>
+	  				<%= link_to "Dashboard", artist_path(@artist), class: "navbar-text" %>
 	  				<%= link_to "Log out", sessions_destroy_path, class: "navbar-text" %>
 	  			<% else %>
 	  				<p class="navbar-text">Welcome to Cupdate!</p>
@@ -33,14 +34,14 @@
 		</nav>
 
 
-<div id="app-wrap" class="container">
+<div id="app-wrap">
 
 <%= yield %>
 
 </div><!--end app-wrap div-->
 
 <footer>
-	<%= image_tag("cup_footer_red.png") %>
+	<%= image_tag("cup_footer_white.png") %>
 	<p>Built by <a href="http://www.efeqdev.com" target=_blank>Efeqdev</a></p>
 </footer>
 

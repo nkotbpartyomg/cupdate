@@ -1,7 +1,42 @@
-<h1>Cupdate</h1>
-<h2>the cup updater app</h2>
+<div id="home-wrapper">
 
-<div id="buttons">
-	<%= link_to "Sign up", new_artist_path, class: "btn btn-default" %>
-	<%= link_to "Log in", sign_in_path, class: "btn btn-default" %>
-</div>
+<div id="banner">
+	<div class="container">
+		<h1>Wish you could keep your customers<span>in the know?</span></h1>
+		<h3>Send them updates on your progress with Cupdate!</h3>
+	</div><!--end container div-->
+</div><!--end banner div-->
+
+<div id="how-it-works">
+	<div class="container">
+		<h3>How does it Work?</h3>
+		<div class="row">
+			<span class="glyphicon glyphicon-plus"></span>
+			<div class="col-sm-8">
+				<h2>A. Add a Product</h2>
+				<p>Enter in what you are currently working on. This is where you will put in your customer’s email address as well.<p>
+			</div>
+		</div><!--end row div-->
+		<div class="row">
+			<span class="glyphicon glyphicon-ok"></span>
+			<div class="col-sm-8">
+				<h2>B. Choose a Development Phase</h2>
+				<p>Choose a development phase and describe your progress. Are you sketching out a plan? Painting the product? Running it to the Post Office?</p>
+			</div>
+		</div><!--end row div-->
+		<div class="row">
+			<span class="glyphicon glyphicon-envelope"></span>
+			<div class="col-sm-8">
+				<h2>C. Send Update</h2>
+				<p>Your customer will receive an email informing them on your progress!</p>
+			</div>
+		</div><!--end row div-->
+	</div><!--end container div-->
+</div><!--end how-it-works div-->
+
+<div id="sign-up">
+	<p>Poor Chris. He didn’t know where his cup was :(<span>We set out to solve that. Now Chris is happy :)</span></p>
+	<%= link_to "Click here to sign up!", new_artist_path, class: "btn btn-default" %>
+</div><!--end sign-up div-->
+
+</div><!--end wrapper div-->

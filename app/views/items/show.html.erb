@@ -1,42 +1,41 @@
-<div id="item-dash-wrapper">
+<div id="item-dash-wrapper" class="container">
 
-<h1><%= @item.name %></h1>
+<h1>Update your progress on <%= @item.name %></h1>
+<h2>For <%= @item.customer_full_name %></h2>
 
-<div id="status-icons" class="container-fluid">
-	<div id="<%= Item::STATUSES[0] %>" class="col-xs-4 active-status">
+<p>This is where you can tell your customer what is happening with their product. Choose what phase you are currently in by clicking the appropriate icon. Then, you can write a note explaing precisely what you are doing. When you are complete, Cupdate will generate an email with your progress update including the design phase and your personal note and email it to your customer.</p>
+
+<div id="status-icons">
+	<h2>Current Phase</h2>
+	<div id="<%= Item::STATUSES[0] %>" class="single-status active-status">
 		<span class="glyphicon glyphicon-pencil"></span>
 		<h3><%= Item::STATUSES[0] %></h3>
 	</div>
-	<div id="<%= Item::STATUSES[1] %>" class="col-xs-4">
+	<div id="<%= Item::STATUSES[1] %>" class="single-status">
 		<span class="glyphicon glyphicon-wrench"></span>
 		<h3><%= Item::STATUSES[1] %></h3>
 	</div>
-	<div id="<%= Item::STATUSES[2] %>" class="col-xs-4">
+	<div id="<%= Item::STATUSES[2] %>" class="single-status">
 		<span class="glyphicon glyphicon-gift"></span>
 		<h3><%= Item::STATUSES[2] %></h3>
 	</div>
 </div> <!--end container-fluid div-->
 
 
-<%= form_tag artist_item_path(@artist, @item), method: :patch do %>
+<%= form_tag artist_item_update_and_send_email_path(@artist, @item), method: :patch do %>
 
 	<%= hidden_field_tag "item[status]" %>
 
 	<div class="field">
-	  	<%= text_area_tag "item[note]", nil, placeholder: "Add a note to describe your progress", size: "40x6" %>
+	  	<%= text_area_tag "item[note]", nil, placeholder: "Add a note to describe your recent progress", size: "40x4" %>
 
 	</div>
 
-	<%= submit_tag "Send this update now", id: "update-button" %>
-	<!--add functionality here to make it send an email-->
+	<%= submit_tag "Send update to customer", class: "btn btn-default" %>
 
 <% end %>
-<br/>
 
-<%= link_to "Edit this item", edit_artist_item_path, class: "btn btn-default" %> <br/>
 
-<%= link_to "Delete this item", artist_item_path, method: :delete, class: "btn btn-default" , data: { confirm: 'Are you sure you want to delete this item?' } %> <br/>
-
-<%= link_to "Back to dashboard", artist_path(@artist), class: "btn btn-default" %> <br/>
+<%= link_to "Edit/delete this product", edit_artist_item_path, class: "btn btn-default", id: "item-edit-button" %>
 
 </div>

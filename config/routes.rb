@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   get "send_test_email/artist/:artist_id", to: 'artists#send_test_email', as: :send_test_email
 
   resources :artists do 
-    resources :items
+    resources :items do
+    patch "update_and_send_email", as: :update_and_send_email
    # get "new_item", to: "artists#new_item", as: "new_item"
+    end
   end
 
  # get 'items' => "items#show", as: :items

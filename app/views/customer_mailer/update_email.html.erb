@@ -5,10 +5,17 @@
   </head>
   <body>
     <h1>Hi <%= @item.customer_first %>, we have a Cupdate for you!</h1>
-    <p><%= @artist.first_name %> has made some progress on your item, <%= @item.name%>.</p>
-    <p>The item is currently in the <b><%= @item.status %></b> phase.</p>
-    <p><%= @artist.first_name %> included this note about your item: <%= @item.note%></p>
+    <br/>
+    <p><%= @artist.first_name %> made some progress on your product, <%= @item.name%>.</p>
+    <p>Your product is currently in the <b><%= @item.status %></b> phase.</p>
+    <br/>
+    <p><%= @artist.first_name %> included this note for you:</p>
+    <p><b><%= @item.note%></b></p>
+    <br/>
+    <p>Please respond directly to <%= @artist.first_name %> at <%= @artist.email %> with any questions.</p>
+    <br/>
     <p>Have a wonderful day!</p>
+    <br/>
     <p>Best,</p>
     <p>Your friends at Cupdate</p>
   </body>

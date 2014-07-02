@@ -1,9 +1,15 @@
 Hi <%= @item.customer_first %>, we have a Cupdate for you!
 ===================================================
 
-<%= @artist.first_name %> has made some progress on your item, <%= @item.name%>.
-The item is currently in the <%= @item.status %> phase.
-<%= @artist.first_name %> included this note about your item: <%= @item.note%>
+<%= @artist.first_name %> made some progress on your product, <%= @item.name%>.
+Your product is currently in the <%= @item.status %> phase.
+
+<%= @artist.first_name %> included this note for you:
+<%= @item.note%>
+
+Please respond directly to <%= @artist.first_name %> at <%= @artist.email %> with any questions.
+
 Have a wonderful day!
+
 Best,
 Your friends at Cupdate

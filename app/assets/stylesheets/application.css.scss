@@ -19,7 +19,8 @@
 
 $darkBlue: #33334C;
 $lightBlue: #009FFF;
-$darkRed: #ff5049;
+$hover: #1e1e30;
+$darkRed: #fd5049;
 $lightRed: #fd8476;
 
 html {
@@ -31,7 +32,7 @@ body {
 	background: $darkRed;
 	color: $darkBlue;
 	font-family: 'Roboto', sans-serif;	
-	font-weight: normal;
+	font-weight: 300;
 	height: 100%;
 }
 
@@ -39,11 +40,9 @@ body {
 	background-color: $darkBlue;
 	border: none;
 	height: 70px;
-	color: #fff;
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 18px;
 	.navbar-text {
-		font-size: 18px;
+		font-size: 22px;
 		color: #fff;
 	}
 	.btn {
@@ -56,10 +55,9 @@ body {
 		font-size: 18px;
 		color: $darkBlue;
 	}
-}
-
-.navbar-right a {
-	text-decoration: underline;
+	.navbar-right {
+		padding-top: 4px;
+	}
 }
 
 .nav-icon {
@@ -70,9 +68,9 @@ body {
 #app-wrap {
 	margin-top: 100px;
 	text-align: center;
-	margin-bottom: 150px;
+	padding-bottom: 230px;
 	.btn {
-	margin: 15px;
+	/*margin: 15px;*/
 }
 
 .btn-default, input[type=submit] {
@@ -86,7 +84,7 @@ body {
 
 .btn-default:hover, input[type=submit]:hover {
 		color: #fff;
-		background-color: $lightBlue;
+		background-color: $hover;
 	}
 
 .field {
@@ -111,7 +109,7 @@ body {
 }
 
 h1, h2, h3 {
-	font-weight: bold;
+	font-weight: 600;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -132,7 +130,7 @@ h3 {
 }
 
 input, textarea {
-	border: solid 2px $lightBlue;
+	border: solid 2px $hover;
 	border-bottom: solid 2px $darkBlue;
 }
 
@@ -144,23 +142,23 @@ label {
 
 /** placeholder styles **/
 ::-webkit-input-placeholder {
-   color: $lightBlue;
-   font-size: 20px;
+   color: $darkBlue;
+   font-size: 24px;
 }
 
 :-moz-placeholder { 
-   color: $lightBlue;
-   font-size: 20px;  
+   color: $darkBlue;
+   font-size: 24px;  
 }
 
 ::-moz-placeholder {  
-   color: $lightBlue;
-   font-size: 20px;  
+   color: $darkBlue;
+   font-size: 24px;  
 }
 
 :-ms-input-placeholder {  
-   color: $lightBlue;
-   font-size: 20px;  
+   color: $darkBlue;
+   font-size: 24px;  
 }
 
 /** end placeholder styling **/
@@ -173,8 +171,7 @@ footer {
 	height: 80px;
 	margin-bottom: 30px;
 	color: #fff;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 	a {
 		color: #fff;
@@ -191,19 +188,105 @@ footer {
 	}
 }
 
+/*------- HOME PAGE -------*/
+
+#home-wrapper{
+
+	color: #fff;
+
+	h1 {
+		font-size: 60px;
+
+		span {
+			display: block;
+		}
+	}
+
+	h2 {
+		font-size: 48px;
+	}
+
+	h3 {
+		font-family: 'Roboto', sans-serif;
+		font-size: 36px;
+		font-weight: 300;
+	}
+
+	p {
+		font-size: 24px;
+	}
+
+	#banner {
+		padding: 30px 0 50px;
+		background-color: $darkRed;
+	}
+
+	#how-it-works {
+		text-align: left;
+		background-color: $darkBlue;
+		padding: 50px 0;
+		h3 {
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		.row {
+			margin-bottom: 30px;
+		}
+	}
+
+	.glyphicon {
+		font-size: 60px;
+		float: left;
+		margin-top: 20px;
+		margin-right: 40px;
+	}
+
+	#sign-up {
+		background-color: $lightBlue;
+		padding: 100px 0;
+		.btn {
+			background: #fff;
+			color: $lightBlue;
+			font-size: 36px;
+		}
+		.btn:hover {
+			background: $darkBlue;
+		}
+		p {
+			width: 500px;
+			margin: 0 auto 50px;
+		}
+		span {
+			display: block;
+		}
+	}
+
+}
+
+.home {
+	#app-wrap {
+		background-color: $lightBlue;
+	}
+}
+
+
 /*------- FORM PAGES -------*/
 
 .form-page {
+
 	h2 {
 		margin-bottom: 50px;
 	}
+
 	p {
 		color: #fff;
 		margin-bottom: 30px;
 	}
+
 	p:last-of-type {
 		margin-bottom: 75px;
 	}
+
 	.pull-left {
 		max-width: 50%;
 		font-size: 18px;
@@ -213,6 +296,7 @@ footer {
 			width: 80%;
 		}
 	}
+
 	.pull-right {
 		text-align: left;
 		label {
@@ -227,98 +311,129 @@ footer {
 
 /*------- ARTIST DASHBOARD -------*/
 
-table {
-	border: solid 1px #fff;
-	font-size: 30px;
-	margin: 75px auto 50px;
-	a {
-		color: $darkBlue;
-		text-decoration: none;
+#artist-dash-wrapper {
+
+	h1 {
+		font-size: 48px;
+		color: #fff;
+		width: 100%;
+		border-bottom: solid 2px #fff;
+		text-align: left;
 	}
-	a:hover, a:active, a:visited {
-		color: $darkBlue;
-		text-decoration: none;
+
+	table {
+		border: solid 1px #fff;
+		font-size: 30px;
+		margin: 75px auto 25px;
+		a {
+			color: $darkBlue;
+			text-decoration: none;
+		}
+		a:hover, a:active, a:visited {
+			color: $darkBlue;
+			text-decoration: none;
+		}
 	}
-}
 
-th {
-	text-align: left;
-	padding: 10px 20px;
-	border-bottom: solid 1px #fff;
-	border-right: solid 1px #fff;
-}
-
-td {
-	padding: 10px 20px;
-	text-align: left;
-	border-bottom: solid 1px #fff;
-	border-right: solid 1px #fff;
-}
-
-
-
-.item-row:hover {
-	a {
-		color: $lightBlue;
+	th {
+		text-align: left;
+		padding: 10px 20px;
+		border-bottom: solid 1px #fff;
+		border-right: solid 1px #fff;
 	}
-}
 
-#no-items-notice {
-		font-size: 24px;
+	td {
+		padding: 10px 20px;
+		text-align: left;
+		border-bottom: solid 1px #fff;
+		border-right: solid 1px #fff;
 	}
+
+	.item-row:hover {
+		a {
+			color: $hover;
+		}
+	}
+
+	#no-items-notice {
+			font-size: 24px;
+		}
+}	
 
 /*------- ITEM DASHBOARD -------*/
 #item-dash-wrapper{
 
-	#status-icons {
-		margin: 75px 100px 75px;
+	text-align: left;
+
+	h1, h2 {
+		color: #fff;
 	}
 
-	#status-icons h3 {
-		display: block;
+	h1 {
 		font-size: 48px;
-		margin-top: 10px;
-
+		width: 100%;
+		border-bottom: solid 2px #fff;
+		padding-bottom: 10px;
 	}
 
-	.col-xs-4 {
-		padding: 30px 0;
-	}
-
-	.col-xs-4 .glyphicon {
-		color: $darkBlue;
-		font-size: 30px;
-	}
-
-	.active-status {
-		border: dashed 2px $lightBlue;
-	}
-
-	.active-status h3 {
-		color: $lightBlue;
-	}
-
-	.active-status .glyphicon {
-		color: $lightBlue;
-	}
-
-	#item_note {
-		margin-bottom: 30px;
-		padding: 10px;
-		font-size: 24px;
-	}
-
-	.btn {
-		display: inline-block;
-	}
-
-	#update-button {
-		background-color: $lightBlue;
+	h2 {
 		font-size: 36px;
 	}
 
-	#update-button:hover {
-		background-color: $lightRed;
+	p {
+		font-size: 22px;
+		line-height: 1.5em;
+		margin-top: 50px;
 	}
 
+	#status-icons {
+		margin: 50px 0;
+		h2 {
+			color: $darkBlue;
+		}
+		h3 {
+			font-size: 24px;
+			font-weight: normal;
+			display: inline-block;
+			margin-left: 20px;
+			text-transform: capitalize;
+		}
+
+	}
+
+	.single-status .glyphicon {
+		color: $darkBlue;
+		font-size: 24px;
+	}
+
+	.active-status h3 {
+		color: #fff;
+	}
+
+	.active-status .glyphicon {
+		color: #fff;
+	}
+
+	#item_note {
+		margin-bottom: 0px;
+		padding: 10px;
+		font-size: 24px;
+		width: 100%;
+		background-color: $lightRed;
+		border: solid 2px $darkBlue;
+		border-bottom: solid 2px #fff;
+	}
+
+	form .btn {
+		font-size: 24px;
+	}
+
+	.btn-default {
+		font-size: 24px;
+		float: right;
+	}
+
+	#item-edit-button {
+		margin-right: 18px;
+	}
 }

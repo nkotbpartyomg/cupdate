@@ -44,10 +44,6 @@ group :development do
   gem "binding_of_caller"
   gem "annotate"
   gem 'quiet_assets'
-  gem 'capistrano', '~> 3.2.1'
-  gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-rvm', github: 'capistrano/rvm'
-  gem 'capistrano-bundler', '~> 1.1.2'
   gem 'stack_rescue'
 end
 
@@ -56,4 +52,9 @@ gem 'devise', '~> 3.2.4'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 
 gem 'jquery-turbolinks', '~> 2.0.2'
+
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rvm', github: 'capistrano/rvm'
 

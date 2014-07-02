@@ -9,7 +9,7 @@ class CustomerMailer < ActionMailer::Base
   def update_email(artist, item)
     @artist = artist
     @item = item
-    mail(to: @item.customer_email, subject: 'Cupdate: Progress has been made on your item')
+    mail(to: @item.customer_email, cc: @artist.email, subject: 'Cupdate: Progress has been made on your product')
   end
 
 

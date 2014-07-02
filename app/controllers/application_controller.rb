@@ -18,6 +18,9 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  def user_signed_in?
+    session[:artist_id].present?
+  end
 
   protected
 

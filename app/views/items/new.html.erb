@@ -1,13 +1,13 @@
-<div class="form-page">
+<div class="form-page container">
 
-<h2>Add a new item</h2>
+<h2>Add a new product</h2>
 
 	<div class="pull-left">
 		<%= image_tag("cup_empty_big.png") %>
 	</div> <!--end left float div-->
 
 	<div class="pull-right">
-		<%= render partial: "form", locals: { artist: @artist, item: @item, submit_button_text: "Save item" } %>
+		<%= render partial: "form", locals: { artist: @artist, item: @item, submit_button_text: "Add to dashboard"} %>
 	</div>
 
 </div>

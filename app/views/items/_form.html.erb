@@ -1,11 +1,11 @@
 <%= form_for [artist, item] do |f| %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :product_name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :product_description %><br>
     <%= f.text_field :description %>
   </div>
   <div class="field">
@@ -23,7 +23,5 @@
   <div class="field">
   	<%= f.submit submit_button_text, class: "btn btn-default" %>
   </div>
-
-  <%= link_to "Back to dashboard", artist_path(@artist), class: "btn btn-default" %>
   
 <% end %>

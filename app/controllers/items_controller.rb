@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 	def show
 		@item = @artist.items.find(params[:id])
 		if @item.blank?
-			redirect_to [@artist], notice: "That item doesn't exist"
+			redirect_to [@artist], notice: "That product doesn't exist"
 		else
 			render "show"
 		end
@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
 	def create
 		@item = @artist.items.new item_params
 		if @item.save 
-			redirect_to [@artist, @item], notice: "Item was successfully created!"
+			redirect_to [@artist, @item], notice: "#{@item.name} was successfully created!"
 		else
 			render "new", notice: "Something went wrong."
 		end
@@ -37,9 +37,18 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 		@item.update item_params
 		if @item.update item_params
-			CustomerMailer.update_email(@artist, @item).deliver
 			redirect_to [@artist, @item], notice: "#{@item.name} was successfully updated!"
-			#don't redirect
+		else
+			render "show", notice: "Something went wrong."
+		end
+	end
+
+	def update_and_send_email
+		@item = Item.find(params[:item_id])
+		@item.update item_params
+		if @item.update item_params
+			CustomerMailer.update_email(@artist, @item).deliver
+			redirect_to [@artist, @item], notice: "Your email was successfully sent!"
 		else
 			render "show", notice: "Something went wrong."
 		end
