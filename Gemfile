@@ -53,6 +53,8 @@ gem 'bootstrap-sass', '~> 3.1.1.1'
 
 gem 'jquery-turbolinks', '~> 2.0.2'
 
+gem 'therubyracer', '~> 0.12.1'
+
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
