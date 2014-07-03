@@ -5,7 +5,7 @@
 <table id="item-table">
   <thead>
     <tr>
-      <th>Product</th>
+      <th>Project</th>
       <th>Customer</th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         </tr>
       <% end %>
       <% else %>
-        <td colspan="2" id="no-items-notice">You haven't added any products to your dashboard yet.</td>
+        <td colspan="2" id="no-items-notice">You haven't added any projects to your dashboard yet.</td>
       <% end %>
   </tbody>
 </table>
@@ -27,7 +27,7 @@
 <%#= link_to "Send Test Email To Artist Address", send_test_email_path(@artist), class: "btn btn-default" %>
 <br>
 
-<%= link_to "Add new product", new_artist_item_path(@artist), class: "btn btn-default" %>
+<%= link_to "Add new project", new_artist_item_path(@artist), class: "btn btn-default" %>
 
 <%= link_to "Edit your settings", edit_artist_path, class: "btn btn-default" %>
 

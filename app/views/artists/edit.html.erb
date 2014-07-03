@@ -1,12 +1,13 @@
 <div class="form-page container">
 
-	<h2>Edit your settings</h2>
+	<ol class="breadcrumb">
+		  <li><%= link_to "Dashboard", artist_path(@artist) %></li>
+		  <li class="active">Edit account</li>
+	</ol>
 
-	<div class="pull-left">
-		<%= image_tag("cup_empty_big.png") %>
-	</div> <!--end left float div-->
+	<h2>Edit Your Account</h2>
 
-	<div class="pull-right">
+	<div>
 		<%= render partial: "form", locals: { artist: @artist, submit_button_text: "Save changes"} %>
 		<%= link_to "Delete your account", artist_path(@artist), method: :delete, class: "btn btn-default" , data: { confirm: 'Are you sure you want to delete your account?' } %> <br/>
 	<div>

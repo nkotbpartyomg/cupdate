@@ -1,9 +1,14 @@
 <div id="item-dash-wrapper" class="container">
 
+<ol class="breadcrumb">
+	<li><%= link_to "Dashboard", artist_path(@artist) %></li>
+	<li class="active">View project</li>
+</ol>
+
 <h1>Update your progress on <%= @item.name %></h1>
 <h2>For <%= @item.customer_full_name %></h2>
 
-<p>This is where you can tell your customer what is happening with their product. Choose what phase you are currently in by clicking the appropriate icon. Then, you can write a note explaing precisely what you are doing. When you are complete, Cupdate will generate an email with your progress update including the design phase and your personal note and email it to your customer.</p>
+<p>This is where you can tell your customer what is happening with their project. Choose what phase you are currently in by clicking the appropriate icon. Then, you can write a note explaing precisely what you are doing. When you are complete, Cupdate will generate an email with your progress update including the design phase and your personal note and email it to your customer.</p>
 
 <div id="status-icons">
 	<h2>Current Phase</h2>
@@ -36,6 +41,6 @@
 <% end %>
 
 
-<%= link_to "Edit/delete this product", edit_artist_item_path, class: "btn btn-default", id: "item-edit-button" %>
+<%= link_to "Edit/delete this project", edit_artist_item_path, class: "btn btn-default", id: "item-edit-button" %>
 
 </div>

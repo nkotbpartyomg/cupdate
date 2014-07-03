@@ -1,12 +1,14 @@
 <div class="form-page container">
 
-<h2>Add a new product</h2>
+<ol class="breadcrumb">
+	<li><%= link_to "Dashboard", artist_path(@artist) %></li>
+	<li class="active">Add project</li>
+</ol>
 
-	<div class="pull-left">
-		<%= image_tag("cup_empty_big.png") %>
-	</div> <!--end left float div-->
+<h2>Add a new project</h2>
 
-	<div class="pull-right">
+
+	<div>
 		<%= render partial: "form", locals: { artist: @artist, item: @item, submit_button_text: "Add to dashboard"} %>
 	</div>
 

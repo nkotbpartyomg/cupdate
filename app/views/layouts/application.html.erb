@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cupdate2</title>
+  <title>Cupdate: the project update app</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -18,16 +18,20 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 		    <div class="navbar-left">
-		    	<a href= "/"><%= image_tag("cupdate_logo.png", class: "nav-icon") %></a>
+		    	<a href= "/"><%= image_tag("cupdate_logo.png", class: "nav-logo") %></a>
 		    </div>
-		    <form class="navbar-form navbar-right">
+		    <form class="navbar-right">
   				<% if session[:artist_id] %>
-	  				<p class="navbar-text">Signed in as <%= @current_user.full_name %> </p>
-	  				<%= link_to "Dashboard", artist_path(@artist), class: "navbar-text" %>
-	  				<%= link_to "Log out", sessions_destroy_path, class: "navbar-text" %>
+  				<ul class="nav navbar-nav">
+  					<li><%= link_to "Dashboard", artist_path(@artist) %></li>
+	  				<li><%= link_to "Signed in as #{@current_user.full_name}", edit_artist_path(Artist.find(session[:artist_id])) %></li>
+	  				<li><%= link_to "Log out", sessions_destroy_path %></li>
+	  			</ul>
 	  			<% else %>
-	  				<p class="navbar-text">Welcome to Cupdate!</p>
-		  			<%=	link_to "Log In Here", sign_in_path, class: "navbar-text" %>	
+	  			<ul class="nav navbar-nav">
+	  				<li class="navbar-text">Welcome to Cupdate!</li>
+		  			<li class="navbar-text"><%=	link_to "Log In Here", sign_in_path %></li>
+		  		</ul>
   				<% end %>
 			</form>
 		</div>

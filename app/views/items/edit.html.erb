@@ -1,14 +1,16 @@
 <div class="form-page container">
 
+<ol class="breadcrumb">
+	<li><%= link_to "Dashboard", artist_path(@artist) %></li>
+	<li><%= link_to "View project", artist_item_path(@item.artist_id, @item) %></li>
+	<li class="active">Edit project</li>
+</ol>
+
 <h2>Edit <%= @item.name %></h2>
 
-	<div class="pull-left">
-		<%= image_tag("cup_empty_big.png") %>
-	</div> <!--end left float div-->
-
-	<div class="pull-right">
+	<div>
 		<%= render partial: "form", locals: { artist: @artist, item: @item, submit_button_text: "Save changes"} %>
-		<%= link_to "Delete this product", artist_item_path, method: :delete, class: "btn btn-default" , data: { confirm: 'Are you sure you want to delete this product?' } %>
+		<%= link_to "Delete this project", artist_item_path, method: :delete, class: "btn btn-default" , data: { confirm: 'Are you sure you want to delete this project?' } %>
 	</div>
 
 </div>
