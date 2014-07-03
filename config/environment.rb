@@ -1,8 +1,9 @@
 # Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
+Rails.application.configure do
 
-  config.action_mailer.default_url_options = { :host => '107.170.11.134' }
+config.action_mailer.default_url_options = { :host => '107.170.11.134' }
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
 
@@ -15,6 +16,7 @@ config.action_mailer.perform_deliveries = true
     password: "9$217YkbF913W4b",
     enable_starttls_auto: true
   }
+end
 
 # Initialize the Rails application.
 Rails.application.initialize!
