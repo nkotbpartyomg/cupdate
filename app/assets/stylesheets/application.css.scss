@@ -56,10 +56,9 @@ body {
 			a:hover, a:active {
 				color: #fff;
 			}
-			.navbar-text {
-				margin-top: 0px;
-				margin-bottom: 0px;
-			}
+		}
+		.nav-not-link {
+			padding: 20px 15px;
 		}
 	}
 
@@ -75,7 +74,7 @@ body {
 
 #app-wrap {
 	margin-top: 80px;
-	text-align: center;
+	text-align: left;
 	padding-bottom: 230px;
 	.btn {
 	/*margin: 15px;*/
@@ -166,6 +165,7 @@ input, textarea {
 	border: solid 2px $hover;
 	border-bottom: solid 2px $darkBlue;
 	background-color: $lightRed;
+	color: $darkBlue;
 }
 
 label {
@@ -227,6 +227,7 @@ footer {
 #home-wrapper{
 
 	color: #fff;
+	text-align: center;
 
 	h1 {
 		font-size: 60px;
@@ -306,7 +307,9 @@ footer {
 
 /*------- SIGN UP PAGE -------*/
 
-.sign-up-page {
+#sign-up-page {
+
+	padding-top: 30px;
 
 	h2 {
 		margin-bottom: 50px;
@@ -337,8 +340,13 @@ footer {
 			margin-left: 0;
 		}
 		.btn {
-		margin: 0;
+		margin-top: 20px;
+		float: right;
 		}
+	}
+
+	input[type="text"], input[type="password"] {
+		width: 100%;
 	}
 }
 
@@ -359,9 +367,11 @@ footer {
 		margin: 10px 0 5px;
 	}
 
-	input[type="text"] {
+	input[type="text"], input[type="password"] {
 		width: 100%;
 	}
+
+
 
 	 .btn-default {
 		font-size: 24px !important;
@@ -383,8 +393,9 @@ footer {
 
 	table {
 		border: solid 1px #fff;
-		font-size: 30px;
-		margin: 75px auto 25px;
+		font-size: 24px;
+		margin: 75px 0 25px;
+		width: 100%;
 		a, , a:visited{
 			color: $darkBlue;
 			text-decoration: none;
