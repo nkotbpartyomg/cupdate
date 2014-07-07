@@ -15,7 +15,6 @@
 /log/*.log
 /tmp
 /config/secrets.yml
-/config/database.yml
 
 # Damn MAC OS X
 .DS_Store
