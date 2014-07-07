@@ -162,8 +162,8 @@ h3 {
 }
 
 input, textarea {
-	border: solid 2px $hover;
-	border-bottom: solid 2px $darkBlue;
+	border: solid 2px $darkBlue;
+	border-bottom: solid 2px #fff;
 	background-color: $lightRed;
 	color: $darkBlue;
 }
@@ -458,6 +458,25 @@ footer {
 		margin-top: 50px;
 	}
 
+	.btn.protip {
+		font-weight: 600;
+		float: none;
+		font-size: 16px;
+		padding: 4px 10px 0;
+		margin-top: -20px;
+		margin-left: 5px;
+	}
+
+	#update-help {
+		float: right;
+		margin-top: 0px;
+		margin-left: 5px;
+	}
+
+	.popover-content {
+		font-size: 16px;
+	}
+
 	#status-icons {
 		margin: 50px 0;
 		h2 {
@@ -487,7 +506,7 @@ footer {
 	}
 
 	#item_note {
-		margin-bottom: 0px;
+		margin-bottom: 10px;
 		padding: 10px;
 		font-size: 24px;
 		width: 100%;
@@ -498,15 +517,12 @@ footer {
 
 	form .btn {
 		font-size: 24px;
-	}
-
-	.btn-default {
-		font-size: 24px;
 		float: right;
 	}
 
 	#item-edit-button {
-		margin-right: 18px;
+		float: left;
+		font-size: 24px;
 	}
 }
 

@@ -8,10 +8,12 @@
 <h1>Update your progress on <%= @item.name %></h1>
 <h2>For <%= @item.customer_full_name %> - <%= @item.customer_email %></h2>
 
-<p>This is where you can tell your customer what is happening with their project. Choose what phase you are currently in by clicking the appropriate icon. Then, you can write a note explaing precisely what you are doing. When you are complete, Cupdate will generate an email with your progress update including the design phase and your personal note and email it to your customer.</p>
+<p><%= @item.description %></p>
 
 <div id="status-icons">
-	<h2>Current Phase</h2>
+	<h2>Current Phase
+		<button type="button" class="btn btn-default protip popover-dismiss" data-toggle="popover" data-content="Select your current phase by clicking the appropriate icon.">?</button>
+	</h2>
 	<div id="<%= Item::STATUSES[0] %>" class="single-status active-status">
 		<span class="glyphicon glyphicon-pencil"></span>
 		<h3><%= Item::STATUSES[0] %></h3>
@@ -32,11 +34,13 @@
 	<%= hidden_field_tag "item[status]" %>
 
 	<div class="field">
-	  	<%= text_area_tag "item[note]", nil, placeholder: "Add a note to describe your recent progress", size: "40x4" %>
+	  	<%= text_area_tag "item[note]", nil, placeholder: "Add a note to describe the progress you've made.", size: "40x4" %>
 
 	</div>
 
-	<%= submit_tag "Send update to customer", class: "btn btn-default" %>
+
+	<button type="button" class="btn btn-default protip popover-dismiss" id="update-help" data-toggle="popover" data-placement="bottom" data-content="An email will be sent to the customer with your current phase and note.">?</button>
+		<%= submit_tag "Send update to customer", class: "btn btn-default" %>
 
 <% end %>
 
