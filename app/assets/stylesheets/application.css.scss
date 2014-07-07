@@ -278,22 +278,23 @@ footer {
 
 	#sign-up {
 		background-color: $lightBlue;
-		padding: 100px 0;
+		/*padding: 100px 0;*/
 		.btn {
 			background: #fff;
 			color: $lightBlue;
 			font-size: 36px;
+			margin: 200px auto 100px;
 		}
 		.btn:hover {
 			background: $darkBlue;
 		}
-		p {
+		/*p {
 			width: 500px;
 			margin: 0 auto 50px;
 		}
 		span {
 			display: block;
-		}
+		}*/
 	}
 
 }
