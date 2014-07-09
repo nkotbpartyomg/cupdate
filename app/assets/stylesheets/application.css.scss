@@ -155,6 +155,18 @@ a {
 		color: #fff;
 }
 
+.tooltip-inner {
+	font-size: 24px;
+	font-weight: 400;
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: $darkRed;
+	max-width: 400px;
+}
+
+.tooltip-arrow {
+	border: none;
+}
+
 /*------- NAV -------*/
 
 
@@ -209,7 +221,6 @@ a {
 
 .nav-logo {
 	padding-top: 15px;
-	max-width: 80%;
 }
 
 #nav-account {
@@ -423,17 +434,6 @@ footer {
 
 	a:hover {
 		color: #fff;
-	}
-
-	.tooltip-inner {
-		font-size: 24px;
-		font-weight: 400;
-		font-family: 'Josefin Sans', sans-serif;
-		background-color: $darkRed;
-	}
-
-	.tooltip-arrow {
-		border: none;
 	}
 
 }

@@ -12,7 +12,11 @@ class ArtistsController < ApplicationController
 	end
 
 	def new
-		@artist = Artist.new
+		if user_signed_in?
+			redirect_to :back, notice: "You're already signed in. To create a new user, log out first."
+		else
+			@artist = Artist.new
+		end
 	end
 
 	def edit

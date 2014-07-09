@@ -1,5 +1,5 @@
 class CustomerMailer < ActionMailer::Base
-  default from: "cupdater@gmail.com"
+  default from: '"Cupdate" <cupdater@gmail.com>'
 
   def welcome_email(artist)
     @artist = artist
