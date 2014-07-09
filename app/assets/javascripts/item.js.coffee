@@ -3,6 +3,7 @@
     $('.popover-dismiss').popover({
     trigger: 'focus'
     });
+    $('.tip').tooltip();
     $('.single-status').click(function(event){
         //remove all pre-existing active-statuses classes
         $('.active-status').removeClass('active-status');

@@ -51,7 +51,6 @@ body {
 	color: $darkBlue;
 	margin-left: 0;
 	padding-left: 0;
-	margin-bottom: 40px;
 	a, a:visited {
 		color: $darkBlue;
 	}
@@ -80,9 +79,6 @@ body {
 		background-color: $hover;
 	}
 
-.field {
-	margin-bottom: 15px;
-}
 }
 
 .alert {
@@ -155,6 +151,10 @@ label {
    font-size: 24px;  
 }
 
+a {
+		color: #fff;
+}
+
 /*------- NAV -------*/
 
 
@@ -172,7 +172,6 @@ label {
 				padding-top: 25px;
 				padding-bottom: 25px;
 				color: #fff;
-				text-decoration: underline;
 
 			}
 			a:hover, a:active {
@@ -191,7 +190,7 @@ label {
 	.navbar-toggle {
 		border: none;
 		margin-top: 2px;
-		&:hover, &:active {
+		&:hover, &:focus {
 			background-color: transparent;
 			.icon-bar {
 				background-color: $darkRed;
@@ -229,9 +228,9 @@ footer {
 	color: #fff;
 	font-size: 20px;
 	text-align: center;
-	a {
-		color: #fff;
-		text-decoration: underline;
+	a:hover {
+		color: $darkBlue;
+		text-decoration: none;
 	}
 	p {
 		margin: 0;
@@ -378,16 +377,18 @@ footer {
 	.pull-right {
 		text-align: left;
 		label {
-			margin-left: 0;
+		margin-left: 0;
+		font-size: 24px;
 		}
 		.btn {
-		margin-top: 20px;
+		margin-top: 25px;
 		float: right;
 		}
 	}
 
 	input[type="text"], input[type="password"] {
 		width: 100%;
+		font-size: 24px;
 	}
 }
 
@@ -399,7 +400,6 @@ footer {
 
 	h2 {
 		color: #fff;
-		margin-bottom: 30px;
 		border-bottom: solid 2px #fff;
 	}
 
@@ -408,16 +408,34 @@ footer {
 		margin: 10px 0 5px;
 	}
 
-	input[type="text"], input[type="password"] {
+	input[type="text"], input[type="password"], textarea {
 		width: 100%;
 	}
 
-
-
 	 .btn-default {
 		font-size: 24px !important;
-		margin-top: 20px;
+		margin-top: 25px;
 	}
+
+	.glyphicon {
+		font-size: 36px;
+	}
+
+	a:hover {
+		color: #fff;
+	}
+
+	.tooltip-inner {
+		font-size: 24px;
+		font-weight: 400;
+		font-family: 'Josefin Sans', sans-serif;
+		background-color: $darkRed;
+	}
+
+	.tooltip-arrow {
+		border: none;
+	}
+
 }
 
 /*------- ARTIST DASHBOARD -------*/
@@ -435,7 +453,7 @@ footer {
 	table {
 		border: solid 1px #fff;
 		font-size: 24px;
-		margin: 75px 0 25px;
+		margin: 50px 0 25px;
 		width: 100%;
 		a, , a:visited{
 			color: $darkBlue;
@@ -473,7 +491,7 @@ footer {
 }	
 
 /*------- ITEM DASHBOARD -------*/
-#item-dash-wrapper{
+#item-dash-wrapper {
 
 	text-align: left;
 
@@ -495,22 +513,22 @@ footer {
 	p {
 		font-size: 22px;
 		line-height: 1.5em;
-		margin-top: 50px;
 	}
 
-	.btn.protip {
-		font-weight: 600;
+	.btn-default.protip {
+		font-weight: 400;
 		float: none;
 		font-size: 16px;
 		padding: 4px 10px 0;
-		margin-top: -20px;
-		margin-left: 5px;
+		margin-top: -10px;
+		margin-right: 10px;
+		border-radius: 10px;
 	}
 
 	#update-help {
 		float: right;
 		margin-top: 0px;
-		margin-left: 5px;
+		padding: 4px 10px 2px;
 	}
 
 	.popover-content {
@@ -570,7 +588,6 @@ footer {
 
 @media (max-width: 691px) {
 	.navbar-default .navbar-nav {
-		border-color: $darkRed;
 		background-color: $darkBlue;
 		margin-top: 0px;
 		li a {
@@ -581,7 +598,7 @@ footer {
 	}
 
 	.navbar-default .navbar-collapse {
-			border-top-color: $darkRed;
+			border: none;
 		}
 
 	#nav-signed-in {

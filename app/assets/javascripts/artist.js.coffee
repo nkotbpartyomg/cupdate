@@ -3,4 +3,5 @@
 	$('.popover-dismiss').popover({
 	trigger: 'focus'
 	});
+	$('.tip').tooltip();
 });`

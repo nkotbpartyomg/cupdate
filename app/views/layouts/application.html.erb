@@ -31,7 +31,7 @@
 	  				<% if session[:artist_id] %>
 	  				<ul class="nav navbar-nav">
 	  					<li><%= link_to "Dashboard", artist_path(@artist) %></li>
-		  				<li id="nav-signed-in"><%= link_to "Signed in as #{@current_user.full_name}", edit_artist_path(Artist.find(session[:artist_id])) %></li>
+		  				<li id="nav-signed-in"><%= link_to "#{@current_user.full_name}", edit_artist_path(Artist.find(session[:artist_id])) %></li>
 		  				<li id="nav-account"><%= link_to "Account", edit_artist_path(Artist.find(session[:artist_id])) %></li>
 		  				<li><%= link_to "Log out", sessions_destroy_path %></li>
 		  			</ul>
