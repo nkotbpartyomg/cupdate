@@ -31,14 +31,14 @@
 	  				<% if session[:artist_id] %>
 	  				<ul class="nav navbar-nav">
 	  					<li><%= link_to "Dashboard", artist_path(@artist) %></li>
-		  				<li id="nav-signed-in"><%= link_to "#{@current_user.full_name}", edit_artist_path(Artist.find(session[:artist_id])) %></li>
+		  				<li id="nav-signed-in"><%= link_to "#{@current_user.first_name}'s account", edit_artist_path(Artist.find(session[:artist_id])) %></li>
 		  				<li id="nav-account"><%= link_to "Account", edit_artist_path(Artist.find(session[:artist_id])) %></li>
 		  				<li><%= link_to "Log out", sessions_destroy_path %></li>
 		  			</ul>
 		  			<% else %>
 		  			<ul class="nav navbar-nav">
-		  				<li class="nav-not-link">Welcome to Cupdate!</li>
-			  			<li><%=	link_to "Log In Here", sign_in_path %></li>
+		  				<li><%= link_to "Sign up", new_artist_path %></li>
+			  			<li><%=	link_to "Log in", sign_in_path %></li>
 			  		</ul>
 	  				<% end %>
 				</form>
