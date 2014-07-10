@@ -260,10 +260,12 @@ footer {
                     position: absolute;
                     left: 0;
                     top: 0;
+                    margin-left: 15px;
                 }
                 &:after {
                     right: 0;
                     left: auto;
+                    margin-right: 15px;
                 }
 	}
 

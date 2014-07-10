@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616221338) do
+ActiveRecord::Schema.define(version: 20140710203429) do
 
   create_table "artists", force: true do |t|
     t.string "first_name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140616221338) do
 
   create_table "items", force: true do |t|
     t.string  "name"
-    t.string  "description"
+    t.text    "description"
     t.integer "artist_id"
     t.string  "status"
     t.text    "note"
