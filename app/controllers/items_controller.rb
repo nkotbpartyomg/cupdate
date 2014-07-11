@@ -37,9 +37,9 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 		@item.update item_params
 		if @item.update item_params
-			redirect_to [@artist, @item], notice: "#{@item.name} was successfully updated!"
+			redirect_to :back, notice: "#{@item.name} was successfully updated!"
 		else
-			render "show", notice: "Something went wrong."
+			redirect_to :back, notice: "Something went wrong."
 		end
 	end
 

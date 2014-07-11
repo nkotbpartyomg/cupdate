@@ -37,9 +37,9 @@ class ArtistsController < ApplicationController
 		@artist = Artist.find(params[:id])
 		@artist.update artist_params
 		if @artist.update artist_params
-			redirect_to artist_path(@artist), notice: "Your account information was successfully updated."
+			redirect_to :back, notice: "Your account information was successfully updated."
 		else
-			redirect_to artist_path(@artist), notice: "Something went wrong."
+			redirect_to :back, notice: "Something went wrong."
 		end
 	end
 
